@@ -3,7 +3,8 @@
 #include<map>
 #include<string>
 
-class Book{
+
+class Book{ // Creating a class
 private:
     int id;
     std::string title;
@@ -35,7 +36,6 @@ isAvailable (true) {}
     }
 
 };
-
 class Member {
 protected:
     int memberId;
@@ -103,10 +103,12 @@ public:
 
 
 int main(){
+  
     Library lib;
     lib.addBook(Book(1, "Theory of Everything", "Stephen Hawking"));
     lib.addBook(Book(2, "Theory of Relativity", "Albert Einstein"));
     lib.addBook(Book(3, "The Selfish Gene", "Richard Dawkins"));
+    lib.addBook(Book(4,"The Chronicles of Narnia", "James Hill" ));
 
     lib.addMember(new Student(101, "Rohan" , "Mathematics"));
     lib.addMember(new Student(102,"Siya", "Physics"));
