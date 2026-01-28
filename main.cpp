@@ -1,3 +1,5 @@
+//Library Management System
+
 #include<iostream>
 #include<vector>
 #include<map>
@@ -11,7 +13,7 @@ private:
     bool isAvailable;
 
 public:
-    Book(int i , std::string t, std::string a) //Constuctor
+    Book(int i , std::string t, std::string a) //Constructor
         : id(i) , title(t) , author(a),
 isAvailable (true) {}
 
@@ -107,9 +109,15 @@ int main(){
     lib.addBook(Book(1, "Theory of Everything", "Stephen Hawking"));
     lib.addBook(Book(2, "Theory of Relativity", "Albert Einstein"));
     lib.addBook(Book(3, "The Selfish Gene", "Richard Dawkins"));
+    lib.addBook(Book(4,"Everthing but You","Alex Root" ));
+    lib.addBook(Book(5,"You and Me", "Richard "));
+    lib.addBook(Book(6, "Hope " , "James Walcott"));
 
     lib.addMember(new Student(101, "Rohan" , "Mathematics"));
     lib.addMember(new Student(102,"Siya", "Physics"));
+    lib.addMember(new Student(103,"Raj" , "Chemistry" ));
+    lib.addMember(new Student(104, "Aditya" , "Physics"));
+    lib.addMember(new Student(105, "Aryan" , "Mathematics"));
     std::cout << "Library Books:" << std::endl;
     lib.showBooks();
 
