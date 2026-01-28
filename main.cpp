@@ -1,10 +1,11 @@
+//Library Management System
+
 #include<iostream>
 #include<vector>
 #include<map>
 #include<string>
 
-
-class Book{ // Creating a class
+class Book{
 private:
     int id;
     std::string title;
@@ -12,7 +13,7 @@ private:
     bool isAvailable;
 
 public:
-    Book(int i , std::string t, std::string a) //Constuctor
+    Book(int i , std::string t, std::string a) //Constructor
         : id(i) , title(t) , author(a),
 isAvailable (true) {}
 
@@ -36,6 +37,7 @@ isAvailable (true) {}
     }
 
 };
+
 class Member {
 protected:
     int memberId;
@@ -103,15 +105,17 @@ public:
 
 
 int main(){
-  
     Library lib;
     lib.addBook(Book(1, "Theory of Everything", "Stephen Hawking"));
     lib.addBook(Book(2, "Theory of Relativity", "Albert Einstein"));
     lib.addBook(Book(3, "The Selfish Gene", "Richard Dawkins"));
-    lib.addBook(Book(4,"The Chronicles of Narnia", "James Hill" ));
+    lib.addBook(Book(4,"Everthing but You","Alex Root" ));
+    lib.addBook(Book(5,"You and Me", "Richard "));
 
     lib.addMember(new Student(101, "Rohan" , "Mathematics"));
     lib.addMember(new Student(102,"Siya", "Physics"));
+    lib.addMember(new Student(103,"Raj" , "Chemistry" ));
+    lib.addMember(new Student(104, "Aditya" , "Physics"));
     std::cout << "Library Books:" << std::endl;
     lib.showBooks();
 
